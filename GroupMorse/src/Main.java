@@ -5,6 +5,11 @@ public class Main {
 	public static void main(String[] args) {
 		TranslateMorse Translate = new TranslateMorse();
 
+		Menu newMenu = new Menu();
+
+		newMenu.switchCase(); // starta meny
+
+
 		//Translate.engToMorse("B");
 		Translate.engToMorse("-..");
 
