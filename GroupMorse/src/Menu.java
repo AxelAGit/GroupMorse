@@ -4,7 +4,8 @@ public class Menu {
 
     static String choice = "";
     Scanner scan = new Scanner(System.in);
-
+	String userInput;
+	Scanner input = new Scanner(System.in);
     void switchCase() {
 
         do {
@@ -20,11 +21,19 @@ public class Menu {
             switch (choice) {
 
                 case "1":
+                	userInput = input.nextLine();
 
                     TranslateMorse.morseToEng("s");
                     break;
 
                 case "2":
+                    System.out.println("Enter morse code.");
+                    System.out.println("Separate letters with one space, separate words with two spaces.");
+                	choice = scan.nextLine();
+                	
+                	TranslateMorse.morseToEng(choice);
+                	System.out.println();
+                	break;
 
                 default:
                     System.out.println("Invlaid choice. choose between 1-3");
