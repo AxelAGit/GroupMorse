@@ -21,14 +21,15 @@ public class Menu {
             switch (choice) {
 
                 case "1":
+                	System.out.println("Enter English characters, words or sentences below");
                 	userInput = input.nextLine();
-
-                    TranslateMorse.morseToEng("s");
+                	   TranslateMorse.engToMorse(choice);
+                	   System.out.println();
                     break;
 
                 case "2":
                     System.out.println("Enter morse code.");
-                    System.out.println("Separate letters with one space, separate words with two spaces.");
+                    System.out.println("Separate letters with one space, separate words with a / .");
                 	choice = scan.nextLine();
                 	
                 	TranslateMorse.morseToEng(choice);
