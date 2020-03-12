@@ -31,10 +31,12 @@ public class Menu {
                     System.out.println("Enter morse code.");
                     System.out.println("Separate letters with one space, separate words with a / .");
                 	choice = scan.nextLine();
-                	
                 	TranslateMorse.morseToEng(choice);
                 	System.out.println();
                 	break;
+                	
+                case "3":
+                	System.exit(1);
 
                 default:
                     System.out.println("Invlaid choice. choose between 1-3");
