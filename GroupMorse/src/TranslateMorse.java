@@ -37,6 +37,7 @@ public class TranslateMorse {
 
 			if(word.isEmpty()) {
 			word = "errorE";
+			System.out.print("invalid input");
 		}
 
 
