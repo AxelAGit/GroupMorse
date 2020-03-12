@@ -40,6 +40,7 @@ public class TranslateMorse {
 			System.out.print(" "); //Lägger till ett blanksteg mellan orden   
 		}
 		return  EngArray[index];
+		//TODO test comment
 
 		
 	}
