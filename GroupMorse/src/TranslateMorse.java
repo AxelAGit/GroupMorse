@@ -8,15 +8,15 @@ public class TranslateMorse {
 			"-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----",
 			".-.-.-", "--..--", "..--..","/" };
 
-	public static String engToMorse(String str) {
-
-		int index = 0;
-		for (int j = 0; j < EngArray.length; j++) {
-			if (EngArray[j] == str) {
-				index = j;
+	public static String engToMorse(String letter) {
+		
+		for(int i=0; i < EngArray.length; i++) {
+			if(letter.equals(EngArray[i])) {
+				System.out.println(MorseArray[i]);
+				letter += MorseArray[i];
 			}
 		}
-		return MorseArray[index];
+		return letter;
 	}
 
 	public static String morseToEng(String morse) { //tar värde från main class
