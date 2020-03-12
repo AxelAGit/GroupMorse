@@ -19,9 +19,11 @@ public class Menu {
             switch (choice) {
 
                 case "1":
+
                 	System.out.println("Enter English characters, words or sentences below");
                 	choice = scan.nextLine();
                 	   TranslateMorse.engToMorse(choice.toUpperCase());
+
                 	   System.out.println();
                     break;
 
