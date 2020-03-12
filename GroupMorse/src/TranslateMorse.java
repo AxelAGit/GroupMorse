@@ -8,6 +8,7 @@ public class TranslateMorse {
 			"-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----",
 			".-.-.-", "--..--", "..--..","/" };
 
+
 	public static String engToMorse(String letter) {
 		
 		for(int i=0; i < EngArray.length; i++) {
@@ -17,14 +18,16 @@ public class TranslateMorse {
 			}
 		}
 		return letter;
+
 	}
 
-	public static String morseToEng(String morse) { //tar värde från main class
+	public static String morseToEng(String morse) { //tar vÃ¤rde frÃ¥n main class
 	    String word="";
-			String[]morseCode = morse.split(" "); //delar upp orden till bokstäver
+
+			String[]morseCode = morse.split(" "); //delar upp orden till bokstÃ¤ver
 			for (String morseLetter:morseCode) 
 			{
-				for (int index = 0; index < MorseArray.length; index++) //jämför varje bokstav mot array värde
+				for (int index = 0; index < MorseArray.length; index++) //jÃ¤mfÃ¶r varje bokstav mot array vÃ¤rde
 				{
 					if (morseLetter.equals(MorseArray[index]))
 					{
@@ -33,14 +36,19 @@ public class TranslateMorse {
 
 					}
 
+
+				}
+				for (int i = 0; i < MorseArray.length; i++) {
+					if(word != MorseArray[i]){
+						word = "errorE";
+					}
 				}
 
 			if(word.isEmpty()) {
 			word = "errorE";
 			System.out.print("invalid input");
+
 		}
-
-
 
 		}
 		return  word;
