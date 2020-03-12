@@ -9,18 +9,20 @@ public class TranslateMorse {
 			".-.-.-", "--..--", "..--..","/" };
 
 	public static String engToMorse(String str) {
-
+		String word ="";
 		int index = 0;
-		for (int j = 0; j < EngArray.length; j++) {
-			if (EngArray[j] == str) {
-				index = j;
+		for (int i = 0; i < EngArray.length; i++) {
+			if (str.equals(EngArray[i])) {
+				System.out.println(MorseArray[i]);
+				word += MorseArray[i];
 			}
 		}
-		return MorseArray[index];
+		return word;
 	}
 
 	public static String morseToEng(String morse) { //tar värde från main class
 	    String word="";
+
 			String[]morseCode = morse.split(" "); //delar upp orden till bokstäver
 			for (String morseLetter:morseCode) 
 			{
@@ -33,14 +35,19 @@ public class TranslateMorse {
 
 					}
 
+
+				}
+				for (int i = 0; i < MorseArray.length; i++) {
+					if(word != MorseArray[i]){
+						word = "errorE";
+					}
 				}
 
 			if(word.isEmpty()) {
 			word = "errorE";
 			System.out.print("invalid input");
+
 		}
-
-
 
 		}
 		return  word;
