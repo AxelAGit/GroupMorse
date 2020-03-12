@@ -19,7 +19,9 @@ public class Menu {
 
             switch (choice) {
 
-                case "1": TranslateMorse.morseToEng("s");
+                case "1":
+
+                    TranslateMorse.morseToEng("s");
                     break;
 
                 case "2":
