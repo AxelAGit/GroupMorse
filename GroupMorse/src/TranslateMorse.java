@@ -20,26 +20,36 @@ public class TranslateMorse {
 	}
 
 	public static String morseToEng(String morse) { //tar värde från main class
-	int index = 0;	
+	    String word="";
+
 		String[]addSpace = morse.split("  "); //delar upp strängen till ord
 		for (String singleWord:addSpace)
 		{
 			String[]morseCode = singleWord.split(" "); //delar upp orden till bokstäver
 			for (String morseLetter:morseCode) 
 			{
-				for (int morseCompare = 0; morseCompare < MorseArray.length; morseCompare++) //jämför varje bokstav mot array värde
+				for (int index = 0; index < MorseArray.length; index++) //jämför varje bokstav mot array värde
 				{
-					if (morseLetter.equals(MorseArray[morseCompare])) 
+					if (morseLetter.equals(MorseArray[index]))
 					{
-						index = morseCompare;
-						System.out.print(EngArray[morseCompare]); 
+					System.out.print(EngArray[index]);
+					word +=	EngArray[index];
+
 					}
 
-				}   
+				}
+
 			}
-			System.out.print(" "); //Lägger till ett blanksteg mellan orden   
+			System.out.print(" "); //Lägger till ett blanksteg mellan orden
+
+			if(word.isEmpty()) {
+			word = "errorE";
 		}
-		return  EngArray[index];
+
+
+
+		}
+		return  word;
 		//TODO test comment
 
 		

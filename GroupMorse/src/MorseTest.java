@@ -46,4 +46,9 @@ public class MorseTest {
 
         assertEquals("errorE",translator.morseToEng("25"));
     }
+
+    @Test
+    public void testMorsetoEngWord() {
+        assertEquals("HI",translator.morseToEng(".... .."));
+    }
 }
