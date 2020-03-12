@@ -41,9 +41,5 @@ public class TranslateMorse {
 			}
 		}
 		return  word;
-		//TODO test comment
-
-
 	}
-
 }
