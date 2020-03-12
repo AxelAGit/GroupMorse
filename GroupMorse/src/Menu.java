@@ -4,8 +4,6 @@ public class Menu {
 
     static String choice = "";
     Scanner scan = new Scanner(System.in);
-	String userInput;
-	Scanner input = new Scanner(System.in);
     void switchCase() {
 
         do {
@@ -22,7 +20,7 @@ public class Menu {
 
                 case "1":
                 	System.out.println("Enter English characters, words or sentences below");
-                	userInput = input.nextLine();
+                	choice = scan.nextLine();
                 	   TranslateMorse.engToMorse(choice);
                 	   System.out.println();
                     break;
