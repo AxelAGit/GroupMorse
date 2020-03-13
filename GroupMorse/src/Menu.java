@@ -21,8 +21,8 @@ public class Menu {
                 case "1":
 
                 	System.out.println("Enter English characters, words or sentences below");
-                	choice = scan.nextLine();
-                	   TranslateMorse.engToMorse(choice.toUpperCase());
+                	choice = scan.nextLine().toUpperCase();
+                	   TranslateMorse.engToMorse(choice);
 
                 	   System.out.println();
                     break;
